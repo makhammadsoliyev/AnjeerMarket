@@ -1,2 +1,2 @@
 # AnjeerMarket
-![image](http://url/to/img.png](https://dbdiagram.io/d/AnjeerMarket-65d89abd5cd0412774a90f58)https://dbdiagram.io/d/AnjeerMarket-65d89abd5cd0412774a90f58)
+![AnjeerMarket](https://github.com/makhammadsoliyev/AnjeerMarket/Assets/149594973/6d082a43-73ca-4969-b1ee-b87c95a07ea2)
