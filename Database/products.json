@@ -9,5 +9,16 @@
     "CreatedAt": "2024-02-24T14:06:52.8530872Z",
     "UpdatedAt": "0001-01-01T00:00:00",
     "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "Name": "as",
+    "Description": "as",
+    "Price": 12.0,
+    "CategoryId": 4,
+    "Id": 2,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T17:27:06.416072Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
   }
 ]

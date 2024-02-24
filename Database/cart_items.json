@@ -1,0 +1,12 @@
+[
+  {
+    "CartId": 1,
+    "ProductId": 1,
+    "Quantity": 12,
+    "Id": 1,
+    "IsDeleted": true,
+    "CreatedAt": "2024-02-24T17:25:59.6288221Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "2024-02-24T17:26:13.4701468Z"
+  }
+]

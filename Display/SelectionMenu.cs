@@ -1,4 +1,5 @@
-﻿using AnjeerMarket.Models.Categories;
+﻿using AnjeerMarket.Models.CartItems;
+using AnjeerMarket.Models.Categories;
 using AnjeerMarket.Models.OrderItems;
 using AnjeerMarket.Models.Products;
 using AnjeerMarket.Models.Users;
@@ -8,6 +9,27 @@ namespace AnjeerMarket.Display;
 
 public class SelectionMenu
 {
+    public Table DataTable(string title, params CartItemViewModel[] cartItems)
+    {
+        var table = new Table();
+
+        table.Title(title.ToUpper())
+            .BorderColor(Color.Blue)
+            .AsciiBorder();
+
+        table.AddColumn("ID");
+        table.AddColumn("Product");
+        table.AddColumn("Quantity");
+
+        foreach (var cartItem in cartItems)
+            table.AddRow(cartItem.Id.ToString(), cartItem.Product.Name, cartItem.Quantity.ToString());
+
+        table.Border = TableBorder.Rounded;
+        table.Centered();
+
+        return table;
+    }
+
     public Table DataTable(string title, params OrderItemViewModel[] orderItems)
     {
         var table = new Table();

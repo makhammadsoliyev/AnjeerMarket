@@ -17,10 +17,13 @@ public class LoginMenu
     private readonly CategoryMenu categoryMenu;
     private readonly SelectionMenu selectionMenu;
     private readonly IOrderService orderService;
+    private readonly ICartService cartService;
+    private CartMenu cartMenu;
+    private readonly ICartItemService cartItemService;
     private readonly IProductService productService;
     private readonly IOrderItemService orderItemService;
 
-    public LoginMenu(IUserService userService, UserMenu userMenu, CategoryMenu categoryMenu, ProductMenu productMenu, IOrderService orderService, IProductService productService, IOrderItemService orderItemService)
+    public LoginMenu(IUserService userService, UserMenu userMenu, CategoryMenu categoryMenu, ProductMenu productMenu, IOrderService orderService, IProductService productService, IOrderItemService orderItemService, ICartService cartService, ICartItemService cartItemService)
     {
         this.userMenu = userMenu;
         this.userService = userService;
@@ -30,6 +33,8 @@ public class LoginMenu
         this.orderService = orderService;
         this.productService = productService;
         this.orderItemService = orderItemService;
+        this.cartService = cartService;
+        this.cartItemService = cartItemService;
     }
 
     public async Task LogIn()
@@ -42,6 +47,7 @@ public class LoginMenu
             id = await userService.LogInAsync(email, password);
             user = await userService.GetByIdAsync(id);
             orderMenu = new OrderMenu(user, orderService, orderItemService, productService);
+            cartMenu = new CartMenu(user, cartService, cartItemService, productService);
             await Display();
         }
         catch (Exception ex)
@@ -95,7 +101,7 @@ public class LoginMenu
                         await orderMenu.Display();
                         break;
                     case "Cart":
-                        await categoryMenu.Display();
+                        await cartMenu.Display();
                         break;
                     case "Back":
                         circle = false;

@@ -15,9 +15,7 @@ public class MainMenu
     private readonly IOrderItemService orderItemService;
 
     private readonly UserMenu userMenu;
-    private readonly CartMenu cartMenu;
     private readonly LoginMenu loginMenu;
-    private readonly OrderMenu orderMenu;
     private readonly ProductMenu productMenu;
     private readonly CategoryMenu categoryMenu;
     private readonly RegistrationMenu registrationMenu;
@@ -33,11 +31,10 @@ public class MainMenu
         this.orderItemService = new OrderItemService(productService, orderService);
 
         this.userMenu = new UserMenu(userService);
-        this.cartMenu = new CartMenu();
         this.categoryMenu = new CategoryMenu(categoryService);
         this.registrationMenu = new RegistrationMenu(userService);
         this.productMenu = new ProductMenu(productService, categoryService);
-        this.loginMenu = new LoginMenu(userService, userMenu, categoryMenu, productMenu, orderService, productService, orderItemService);
+        this.loginMenu = new LoginMenu(userService, userMenu, categoryMenu, productMenu, orderService, productService, orderItemService, cartService, cartItemService);
     }
 
     public async Task Main()
