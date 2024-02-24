@@ -7,7 +7,7 @@ public interface IUserService
 {
     Task<UserViewModel> CreateAsync(UserCreationModel user);
     Task<UserViewModel> GetByIdAsync(long id);
-    Task<UserViewModel> UpdateAsync(long id, UserUpdateModel user);
+    Task<UserViewModel> UpdateAsync(long id, UserUpdateModel user, bool isUsedDeleted = false);
     Task<bool> DeleteAsync(long id);
     Task<IEnumerable<UserViewModel>> GetAllAsync(Role? role = null);
 }
