@@ -1,4 +1,5 @@
 ﻿using AnjeerMarket.Models.Categories;
+using AnjeerMarket.Models.OrderItems;
 using AnjeerMarket.Models.Products;
 using AnjeerMarket.Models.Users;
 using Spectre.Console;
@@ -7,6 +8,28 @@ namespace AnjeerMarket.Display;
 
 public class SelectionMenu
 {
+    public Table DataTable(string title, params OrderItemViewModel[] orderItems)
+    {
+        var table = new Table();
+
+        table.Title(title.ToUpper())
+            .BorderColor(Color.Blue)
+            .AsciiBorder();
+
+        table.AddColumn("ID");
+        table.AddColumn("Product");
+        table.AddColumn("Quantity");
+        table.AddColumn("Date");
+
+        foreach (var orderItem in orderItems)
+            table.AddRow(orderItem.Id.ToString(), orderItem.Product.Name, orderItem.Quantity.ToString(), orderItem.Order.Date.ToString());
+
+        table.Border = TableBorder.Rounded;
+        table.Centered();
+
+        return table;
+    }
+
     public Table DataTable(string title, params ProductViewModel[] products)
     {
         var table = new Table();
@@ -29,7 +52,6 @@ public class SelectionMenu
 
         return table;
     }
-
 
     public Table DataTable(string title, params CategoryViewModel[] categories)
     {

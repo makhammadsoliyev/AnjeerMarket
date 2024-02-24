@@ -8,21 +8,28 @@ namespace AnjeerMarket.Display;
 public class LoginMenu
 {
     private long id;
-    private UserViewModel user;
+    public UserViewModel user;
     private readonly UserMenu userMenu;
+    private OrderMenu orderMenu;
     private readonly ProductMenu productMenu;
     private IEnumerable<UserViewModel> users;
     private readonly IUserService userService;
     private readonly CategoryMenu categoryMenu;
     private readonly SelectionMenu selectionMenu;
+    private readonly IOrderService orderService;
+    private readonly IProductService productService;
+    private readonly IOrderItemService orderItemService;
 
-    public LoginMenu(IUserService userService, UserMenu userMenu, CategoryMenu categoryMenu, ProductMenu productMenu)
+    public LoginMenu(IUserService userService, UserMenu userMenu, CategoryMenu categoryMenu, ProductMenu productMenu, IOrderService orderService, IProductService productService, IOrderItemService orderItemService)
     {
         this.userMenu = userMenu;
         this.userService = userService;
         this.productMenu = productMenu;
         this.categoryMenu = categoryMenu;
         this.selectionMenu = new SelectionMenu();
+        this.orderService = orderService;
+        this.productService = productService;
+        this.orderItemService = orderItemService;
     }
 
     public async Task LogIn()
@@ -34,6 +41,7 @@ public class LoginMenu
         {
             id = await userService.LogInAsync(email, password);
             user = await userService.GetByIdAsync(id);
+            orderMenu = new OrderMenu(user, orderService, orderItemService, productService);
             await Display();
         }
         catch (Exception ex)
@@ -74,7 +82,26 @@ public class LoginMenu
             }
         else
         {
+            while (circle)
+            {
+                AnsiConsole.Clear();
+                AnsiConsole.MarkupLine($"[red]{user.FirstName} {user.LastName}, you are {user.Role}[/]");
+                var selection = selectionMenu.ShowSelectionMenu("Choose one of options",
+                    new string[] { "Order", "Cart", "Back" });
 
+                switch (selection)
+                {
+                    case "Order":
+                        await orderMenu.Display();
+                        break;
+                    case "Cart":
+                        await categoryMenu.Display();
+                        break;
+                    case "Back":
+                        circle = false;
+                        break;
+                }
+            }
         }
     }
 }

@@ -51,7 +51,7 @@ public class OrderService : IOrderService
     public async Task<IEnumerable<OrderViewModel>> GetAllAsync(long? userId = null)
     {
         orders = await FileIO.ReadAsync<Order>(Constants.ORDERS_PATH);
-        orders.FindAll(o => !o.IsDeleted);
+        orders = orders.FindAll(o => !o.IsDeleted && o.UserId == userId);
 
         var result = new List<OrderViewModel>();
         foreach (var order in orders)
@@ -70,7 +70,7 @@ public class OrderService : IOrderService
     {
         orders = await FileIO.ReadAsync<Order>(Constants.ORDERS_PATH);
         var order = orders.FirstOrDefault(o => o.Id == id && !o.IsDeleted)
-            ?? throw new Exception($"Order was not found with this id");
+            ?? throw new Exception($"Order was not found with this id = {id}");
 
         var user = await userService.GetByIdAsync(order.UserId);
         var res = order.MapTo<OrderViewModel>();

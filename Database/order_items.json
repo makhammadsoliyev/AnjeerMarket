@@ -1,0 +1,22 @@
+[
+  {
+    "OrderId": 1,
+    "ProductId": 1,
+    "Quantity": 12,
+    "Id": 1,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T15:53:31.7514397Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "2024-02-24T16:20:27.6683188Z"
+  },
+  {
+    "OrderId": 2,
+    "ProductId": 1,
+    "Quantity": 123,
+    "Id": 2,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T16:15:58.8777389Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  }
+]

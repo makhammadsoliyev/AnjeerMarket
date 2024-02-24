@@ -18,7 +18,7 @@
     "Password": "As12as12",
     "Role": 2,
     "Id": 2,
-    "IsDeleted": true,
+    "IsDeleted": false,
     "CreatedAt": "2024-02-24T12:36:07.7195505Z",
     "UpdatedAt": "0001-01-01T00:00:00",
     "DeletedAt": "2024-02-24T13:13:44.6641869Z"
@@ -33,6 +33,30 @@
     "IsDeleted": false,
     "CreatedAt": "2024-02-24T13:11:40.7443718Z",
     "UpdatedAt": "2024-02-24T14:02:56.0892452Z",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "FirstName": "Umidjon",
+    "LastName": "M",
+    "Email": "umidjon@gmail.com",
+    "Password": "Umidjon2002",
+    "Role": 2,
+    "Id": 4,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T15:23:43.7573316Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "FirstName": "Umidjon",
+    "LastName": "a",
+    "Email": "as.as.as@as.asas",
+    "Password": "7889HJKUjk",
+    "Role": 2,
+    "Id": 5,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T15:39:09.8297103Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
     "DeletedAt": "0001-01-01T00:00:00"
   }
 ]

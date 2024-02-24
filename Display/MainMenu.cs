@@ -6,25 +6,38 @@ namespace AnjeerMarket.Display;
 
 public class MainMenu
 {
-    private readonly RegistrationMenu registrationMenu;
-    private readonly LoginMenu loginMenu;
     private readonly IUserService userService;
-    private readonly ProductMenu productMenu;
-    private readonly UserMenu userMenu;
-    private readonly CategoryMenu categoryMenu;
-    private readonly ICategoryService categoryService;
+    private readonly ICartService cartService;
+    private readonly IOrderService orderService;
     private readonly IProductService productService;
+    private readonly ICartItemService cartItemService;
+    private readonly ICategoryService categoryService;
+    private readonly IOrderItemService orderItemService;
+
+    private readonly UserMenu userMenu;
+    private readonly CartMenu cartMenu;
+    private readonly LoginMenu loginMenu;
+    private readonly OrderMenu orderMenu;
+    private readonly ProductMenu productMenu;
+    private readonly CategoryMenu categoryMenu;
+    private readonly RegistrationMenu registrationMenu;
 
     public MainMenu()
     {
-        userService = new UserService();
-        categoryService = new CategoryService();
-        productService = new ProductService(categoryService);
-        userMenu = new UserMenu(userService);
-        categoryMenu = new CategoryMenu(categoryService);
-        productMenu = new ProductMenu(productService, categoryService);
-        registrationMenu = new RegistrationMenu(userService);
-        loginMenu = new LoginMenu(userService, userMenu, categoryMenu, productMenu);
+        this.userService = new UserService();
+        this.categoryService = new CategoryService();
+        this.cartService = new CartService(userService);
+        this.orderService = new OrderService(userService);
+        this.productService = new ProductService(categoryService);
+        this.cartItemService = new CartItemService(cartService, productService);
+        this.orderItemService = new OrderItemService(productService, orderService);
+
+        this.userMenu = new UserMenu(userService);
+        this.cartMenu = new CartMenu();
+        this.categoryMenu = new CategoryMenu(categoryService);
+        this.registrationMenu = new RegistrationMenu(userService);
+        this.productMenu = new ProductMenu(productService, categoryService);
+        this.loginMenu = new LoginMenu(userService, userMenu, categoryMenu, productMenu, orderService, productService, orderItemService);
     }
 
     public async Task Main()
