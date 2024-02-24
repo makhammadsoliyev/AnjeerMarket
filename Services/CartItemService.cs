@@ -26,7 +26,7 @@ public class CartItemService : ICartItemService
 
         var createdCartItem = cartItem.MapTo<CartItem>();
         createdCartItem.Id = cartItems.GenerateId();
-        
+
         cartItems.Add(createdCartItem);
 
         await FileIO.WriteAsync(Constants.CART_ITEMS_PATH, cartItems);
@@ -66,7 +66,7 @@ public class CartItemService : ICartItemService
 
             ci.Cart = cart;
             ci.Product = product;
-            
+
             result.Add(ci);
         }
 

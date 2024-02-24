@@ -48,7 +48,7 @@ public class OrderItemService : IOrderItemService
         orderItem.DeletedAt = DateTime.UtcNow;
 
         await FileIO.WriteAsync(Constants.ORDER_ITEMS_PATH, orderItems);
-        
+
         return true;
     }
 
