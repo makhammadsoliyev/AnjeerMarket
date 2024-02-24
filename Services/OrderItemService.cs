@@ -57,7 +57,7 @@ public class OrderItemService : IOrderItemService
         orderItems = await FileIO.ReadAsync<OrderItem>(Constants.ORDER_ITEMS_PATH);
         if (orderId is null)
             orderItems = orderItems.FindAll(oi => !oi.IsDeleted);
-        else    
+        else
             orderItems = orderItems.FindAll(oi => !oi.IsDeleted && oi.OrderId == orderId);
 
         var result = new List<OrderItemViewModel>();

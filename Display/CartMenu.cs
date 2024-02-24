@@ -1,11 +1,8 @@
 ﻿using AnjeerMarket.Interfaces;
 using AnjeerMarket.Models.CartItems;
 using AnjeerMarket.Models.Carts;
-using AnjeerMarket.Models.OrderItems;
-using AnjeerMarket.Models.Orders;
 using AnjeerMarket.Models.Products;
 using AnjeerMarket.Models.Users;
-using AnjeerMarket.Services;
 using Spectre.Console;
 
 namespace AnjeerMarket.Display;
@@ -51,7 +48,7 @@ public class CartMenu
 
         while (true)
         {
-            selection = selectionMenu.ShowSelectionMenu("Products", products.Select(p => $"{p.Id} {p.Name}").Append("Finish").ToArray());
+            selection = selectionMenu.ShowSelectionMenu("Products", products.Select(p => $"{p.Id} {p.Name}").Reverse().Append("Finish").Reverse().ToArray());
             if (selection == "Finish")
                 break;
             int quantity = AnsiConsole.Ask<int>("[yellow]Quantity: [/]");

@@ -8,5 +8,45 @@
     "CreatedAt": "2024-02-24T17:25:59.6288221Z",
     "UpdatedAt": "0001-01-01T00:00:00",
     "DeletedAt": "2024-02-24T17:26:13.4701468Z"
+  },
+  {
+    "CartId": 1,
+    "ProductId": 1,
+    "Quantity": 1,
+    "Id": 2,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T17:42:24.2172394Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "CartId": 1,
+    "ProductId": 12,
+    "Quantity": 2,
+    "Id": 3,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T17:42:26.7324442Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "CartId": 1,
+    "ProductId": 30,
+    "Quantity": 54,
+    "Id": 4,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T17:42:30.9991397Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "CartId": 1,
+    "ProductId": 33,
+    "Quantity": 34,
+    "Id": 5,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T17:42:35.152598Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
   }
 ]

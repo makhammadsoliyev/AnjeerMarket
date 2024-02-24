@@ -1,9 +1,5 @@
-﻿using AnjeerMarket.Enums;
-using AnjeerMarket.Interfaces;
-using AnjeerMarket.Models.Categories;
+﻿using AnjeerMarket.Interfaces;
 using AnjeerMarket.Models.Products;
-using AnjeerMarket.Models.Users;
-using AnjeerMarket.Services;
 using Spectre.Console;
 
 namespace AnjeerMarket.Display;

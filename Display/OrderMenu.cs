@@ -44,7 +44,7 @@ public class OrderMenu
 
         while (true)
         {
-            selection = selectionMenu.ShowSelectionMenu("Products", products.Select(p => $"{p.Id} {p.Name}").Append("Finish").ToArray());
+            selection = selectionMenu.ShowSelectionMenu("Products", products.Select(p => $"{p.Id} {p.Name}").Reverse().Append("Finish").Reverse().ToArray());
             if (selection == "Finish")
                 break;
             int quantity = AnsiConsole.Ask<int>("[yellow]Quantity: [/]");
