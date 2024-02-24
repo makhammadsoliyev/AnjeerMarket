@@ -64,6 +64,15 @@ public class UserService : IUserService
         return user.MapTo<UserViewModel>();
     }
 
+    public async Task<long> LogInAsync(string email, string password)
+    {
+        users = await FileIO.ReadAsync<User>(Constants.USERS_PATH);
+        var user = users.FirstOrDefault(u => u.Email == email && !u.IsDeleted && u.Password == password)
+            ?? throw new Exception($"User was not found");
+
+        return user.Id;
+    }
+
     public async Task<UserViewModel> UpdateAsync(long id, UserUpdateModel user, bool isUsedDeleted = false)
     {
         users = (await FileIO.ReadAsync<User>(Constants.USERS_PATH)).ToList();

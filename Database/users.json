@@ -1,0 +1,38 @@
+[
+  {
+    "FirstName": "Umidbek",
+    "LastName": "Maxammadsoliyev",
+    "Email": "makhammadsoliyev@gmail.com",
+    "Password": "Umidjon2002",
+    "Role": 1,
+    "Id": 1,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T12:30:07.3199151Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "FirstName": "as",
+    "LastName": "as",
+    "Email": "as@as.as",
+    "Password": "As12as12",
+    "Role": 2,
+    "Id": 2,
+    "IsDeleted": true,
+    "CreatedAt": "2024-02-24T12:36:07.7195505Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "2024-02-24T13:13:44.6641869Z"
+  },
+  {
+    "FirstName": "Odiljon",
+    "LastName": "Maxammadsoliyev",
+    "Email": "as@as.as.as.as",
+    "Password": "Uaskj123",
+    "Role": 2,
+    "Id": 3,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T13:11:40.7443718Z",
+    "UpdatedAt": "2024-02-24T14:02:56.0892452Z",
+    "DeletedAt": "0001-01-01T00:00:00"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "Name": ".net",
+    "Description": ".Net",
+    "Price": 2200000.0,
+    "CategoryId": 1,
+    "Id": 1,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T14:06:52.8530872Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  }
+]

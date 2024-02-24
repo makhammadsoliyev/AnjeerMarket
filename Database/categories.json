@@ -1,0 +1,29 @@
+[
+  {
+    "Name": "Programming",
+    "Description": "asdf",
+    "Id": 1,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T14:04:55.6319847Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "Name": "as",
+    "Description": "as",
+    "Id": 2,
+    "IsDeleted": true,
+    "CreatedAt": "2024-02-24T14:05:01.9013444Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "2024-02-24T14:05:46.3825692Z"
+  },
+  {
+    "Name": ".net",
+    "Description": "askjkj",
+    "Id": 3,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-24T14:06:06.4669189Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  }
+]

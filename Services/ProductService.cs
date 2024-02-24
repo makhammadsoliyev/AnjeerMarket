@@ -51,7 +51,10 @@ public class ProductService : IProductService
     public async Task<IEnumerable<ProductViewModel>> GetAllAsync(long? categoryId = null)
     {
         products = await FileIO.ReadAsync<Product>(Constants.PRODUCTS_PATH);
-        products = products.FindAll(p => !p.IsDeleted);
+        if (categoryId is null)
+            products = products.FindAll(p => !p.IsDeleted);
+        else
+            products = products.FindAll(p => !p.IsDeleted && p.CategoryId == categoryId);
 
         var result = new List<ProductViewModel>();
         foreach (var product in products)
