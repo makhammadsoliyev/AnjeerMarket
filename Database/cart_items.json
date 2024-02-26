@@ -48,5 +48,25 @@
     "CreatedAt": "2024-02-24T17:42:35.152598Z",
     "UpdatedAt": "0001-01-01T00:00:00",
     "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "CartId": 2,
+    "ProductId": 2,
+    "Quantity": 12,
+    "Id": 6,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-26T13:51:06.6432438Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "CartId": 2,
+    "ProductId": 1,
+    "Quantity": 123,
+    "Id": 7,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-26T13:51:12.9676014Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
   }
 ]

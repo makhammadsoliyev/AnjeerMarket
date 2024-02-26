@@ -58,5 +58,29 @@
     "CreatedAt": "2024-02-24T15:39:09.8297103Z",
     "UpdatedAt": "0001-01-01T00:00:00",
     "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "FirstName": "Axmad",
+    "LastName": "as",
+    "Email": "axmad@gmail.com",
+    "Password": "Axmad2001",
+    "Role": 1,
+    "Id": 6,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-26T13:45:39.0963508Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
+  },
+  {
+    "FirstName": "Komiljon",
+    "LastName": "as",
+    "Email": "komil@gmail.com",
+    "Password": "Komil2003",
+    "Role": 2,
+    "Id": 7,
+    "IsDeleted": false,
+    "CreatedAt": "2024-02-26T13:48:37.3594831Z",
+    "UpdatedAt": "0001-01-01T00:00:00",
+    "DeletedAt": "0001-01-01T00:00:00"
   }
 ]
