@@ -10998,16 +10998,5 @@
     "CreatedAt": "2024-02-24T00:00:00",
     "UpdatedAt": "2024-02-24T00:00:00",
     "DeletedAt": "2024-02-24T00:00:00"
-  },
-  {
-    "Name": "asa",
-    "Description": "asa",
-    "Price": 12.0,
-    "CategoryId": 13,
-    "Id": 1001,
-    "IsDeleted": false,
-    "CreatedAt": "2024-02-26T13:47:30.0485756Z",
-    "UpdatedAt": "0001-01-01T00:00:00",
-    "DeletedAt": "0001-01-01T00:00:00"
   }
 ]
